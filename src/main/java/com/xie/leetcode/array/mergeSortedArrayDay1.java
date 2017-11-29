@@ -4,9 +4,8 @@ import java.util.Arrays;
 
 /**
  * 
- * @author xie4ever
- * Merge Sorted Array
- * https://leetcode.com/problems/merge-sorted-array/description/
+ * @author xie4ever Merge Sorted Array
+ *         https://leetcode.com/problems/merge-sorted-array/description/
  *
  */
 
