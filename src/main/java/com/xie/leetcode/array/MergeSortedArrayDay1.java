@@ -8,7 +8,7 @@ import java.util.Arrays;
  *
  */
 
-public class mergeSortedArrayDay1 {
+public class MergeSortedArrayDay1 {
 
 	public static void merge(int A[], int m, int B[], int n) {
 
