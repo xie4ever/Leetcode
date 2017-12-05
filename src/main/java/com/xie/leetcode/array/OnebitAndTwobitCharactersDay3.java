@@ -4,13 +4,24 @@ public class OnebitAndTwobitCharactersDay3 {
 
 	public static boolean isOneBitCharacter(int[] bits) {
 
-		int i = 0;
+		System.out.println("length = " + bits.length);
 
-		while (i < bits.length - 1) {
+		int i = 1;
+
+		if (bits[i - 1] == 1) {
+
+			i += 2;
+
+		} else {
+
+			i++;
+		}
+
+		while (i < bits.length) {
 
 			System.out.println(i);
 
-			if (bits[i] == 1) {
+			if (bits[i - 1] == 1) {
 
 				i += 2;
 
@@ -20,7 +31,7 @@ public class OnebitAndTwobitCharactersDay3 {
 			}
 		}
 
-		if (i == bits.length - 1) {
+		if (i == bits.length) {
 
 			return true;
 
