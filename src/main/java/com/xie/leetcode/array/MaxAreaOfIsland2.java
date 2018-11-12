@@ -1,44 +1,31 @@
 package com.xie.leetcode.array;
 
 /**
- * 
  * @author xie4ever
- *
  */
-
-public class MaxAreaOfIslandDay5 {
+public class MaxAreaOfIsland2 {
 
 	public static int maxAreaOfIsland(int[][] grid) {
-
 		int area = 0;
 		int temp = 0;
 
 		for (int i = 0; i < grid.length; i++) {
-
 			for (int j = 0; j < grid[0].length; j++) {
-
 				if (grid[i][j] == 1) {
-
 					temp = findNeighbor(grid, j, i);
-
 					area = Math.max(area, temp);
 				}
 			}
 		}
-
 		return area;
 	}
 
 	public static int findNeighbor(int[][] map, int x, int y) {
-
 		int sum = 1;
 
 		if (map[y][x] == 0) {
-
 			return 0; // 找不到就不加
-
 		} else {
-
 			map[y][x] = 0; // 历史记录置为0，否则会死循环
 		}
 
@@ -58,7 +45,6 @@ public class MaxAreaOfIslandDay5 {
 	}
 
 	public static void main(String[] args) {
-
 		int[][] grid1 = new int[][] { { 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0 },
 				                      { 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0 }, 
 				                      { 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0 },
