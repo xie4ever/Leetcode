@@ -5,6 +5,7 @@ package com.xie.leetcode.array;
  * @date 2018/11/13 18:24
  */
 public class PalindromeNumber {
+
     public boolean isPalindrome(int x) {
         String temp = String.valueOf(x);
         StringBuilder stringBuilder = new StringBuilder();
