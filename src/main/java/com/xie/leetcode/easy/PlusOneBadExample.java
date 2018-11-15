@@ -1,4 +1,4 @@
-package com.xie.leetcode.array;
+package com.xie.leetcode.easy;
 
 /**
  * @author xie4ever

@@ -1,8 +1,6 @@
-package com.xie.leetcode.array;
+package com.xie.leetcode.easy;
 
 import lombok.Data;
-
-import java.util.List;
 
 /**
  * @author xie4ever
