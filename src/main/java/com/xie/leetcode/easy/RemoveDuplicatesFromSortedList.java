@@ -1,10 +1,13 @@
 package com.xie.leetcode.easy;
 
+import com.xie.leetcode.struct.ListNode;
+
 /**
  * @author xie4ever
  * @date 2018/11/17 0:23
  */
 public class RemoveDuplicatesFromSortedList {
+
     public ListNode deleteDuplicates(ListNode head) {
         if (head == null) {
             return null;
