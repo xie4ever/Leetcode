@@ -1,6 +1,6 @@
 package com.xie.leetcode.easy;
 
-import lombok.Data;
+import com.xie.leetcode.struct.ListNode;
 
 /**
  * @author xie4ever
@@ -52,15 +52,5 @@ public class MergeTwoSortedLists {
 
         MergeTwoSortedLists mergeTwoSortedLists = new MergeTwoSortedLists();
         System.out.println(mergeTwoSortedLists.mergeTwoLists(n1, n2));
-    }
-}
-
-@Data
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
     }
 }
