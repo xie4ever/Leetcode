@@ -9,24 +9,14 @@ import java.util.List;
  * @author xie4ever
  * @date 2018/11/17 14:35
  */
-public class BinaryTreeInorderTraversal {
+public class BinaryTreeInorderTraversalBadExample {
 
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<Integer>();
         if (root == null) {
             return result;
         }
-        find(root, result);
         return result;
-    }
-
-    public void find(TreeNode root , List<Integer> result) {
-        if (root == null) {
-            return;
-        }
-        find(root.left, result);
-        result.add(root.val);
-        find(root.right, result);
     }
 
     public static void main(String[] args) {
@@ -41,8 +31,8 @@ public class BinaryTreeInorderTraversal {
         root2.left = root3;
         root2.right = root4;
 
-        BinaryTreeInorderTraversal binaryTreeInorderTraversal = new BinaryTreeInorderTraversal();
-        System.out.println(binaryTreeInorderTraversal.inorderTraversal(root1));;
+        BinaryTreeInorderTraversalBadExample binaryTreePreorderTraversal = new BinaryTreeInorderTraversalBadExample();
+        System.out.println(binaryTreePreorderTraversal.inorderTraversal(root1));
         System.out.println(root1);
     }
 }

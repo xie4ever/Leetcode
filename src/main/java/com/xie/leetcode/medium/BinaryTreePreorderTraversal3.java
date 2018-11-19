@@ -3,14 +3,17 @@ package com.xie.leetcode.medium;
 import com.xie.leetcode.struct.TreeNode;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Stack;
 
 /**
  * @author xie4ever
- * @date 2018/11/17 16:28
+ * @date 2018/11/18 23:38
  */
-public class BinaryTreePreorderTraversal2 {
+public class BinaryTreePreorderTraversal3 {
+
+    HashMap<Integer, Boolean> map = new HashMap<Integer, Boolean>();
 
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<Integer>();
@@ -24,12 +27,12 @@ public class BinaryTreePreorderTraversal2 {
         while (stack.size() != 0) {
             TreeNode left = stack.peek().left;
             TreeNode right = stack.peek().right;
-            if (left != null) {
-                stack.peek().left = null;
+            if (left != null && map.get(left.hashCode()) == null) {
+                map.put(left.hashCode(), true);
                 result.add(left.val);
                 stack.push(left);
-            } else if (right != null) {
-                stack.peek().right = null;
+            } else if (right != null && map.get(right.hashCode()) == null) {
+                map.put(right.hashCode(), true);
                 result.add(right.val);
                 stack.push(right);
             } else {
@@ -51,7 +54,7 @@ public class BinaryTreePreorderTraversal2 {
         root2.left = root3;
         root2.right = root4;
 
-        BinaryTreePreorderTraversal2 binaryTreePreorderTraversal = new BinaryTreePreorderTraversal2();
+        BinaryTreePreorderTraversal3 binaryTreePreorderTraversal = new BinaryTreePreorderTraversal3();
         System.out.println(binaryTreePreorderTraversal.preorderTraversal(root1));
         System.out.println(root1);
     }
