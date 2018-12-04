@@ -7,6 +7,7 @@ import java.util.Stack;
  * @date 2018/11/12 18:41
  */
 public class ReverseInteger {
+
     public int reverse(int x) {
         try {
             long maxVal = 1;
