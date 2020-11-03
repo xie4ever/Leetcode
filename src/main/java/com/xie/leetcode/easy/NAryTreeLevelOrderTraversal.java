@@ -23,11 +23,11 @@ public class NAryTreeLevelOrderTraversal {
         }
     }
 
-    private HashMap<Integer, List<Integer>> map = new HashMap<>();
+    private HashMap<Integer, List<Integer>> map = new HashMap<Integer, List<Integer>>();
 
     public List<List<Integer>> levelOrder(Node root) {
         go(0, root);
-        List<List<Integer>> list = new ArrayList<>();
+        List<List<Integer>> list = new ArrayList<List<Integer>>();
         for (Integer level : map.keySet()) {
             list.add(map.get(level));
         }
@@ -40,7 +40,7 @@ public class NAryTreeLevelOrderTraversal {
         }
         List<Integer> list = map.get(level);
         if (list == null) {
-            List<Integer> l = new ArrayList<>();
+            List<Integer> l = new ArrayList<Integer>();
             l.add(root.val);
             map.put(level, l);
         } else {

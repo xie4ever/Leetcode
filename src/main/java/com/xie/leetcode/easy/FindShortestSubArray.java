@@ -13,8 +13,8 @@ public class FindShortestSubArray {
         if (nums.length <= 1) {
             return nums.length;
         }
-        Map<Integer, Integer> mapIndex = new HashMap<>();
-        Map<Integer, Integer> mapCount = new HashMap<>();
+        Map<Integer, Integer> mapIndex = new HashMap<Integer, Integer>();
+        Map<Integer, Integer> mapCount = new HashMap<Integer, Integer>();
         int min = 1;
         int cnt = 1;
         for (int i = 0; i < nums.length; i++) {

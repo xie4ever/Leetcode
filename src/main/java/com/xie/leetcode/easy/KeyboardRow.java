@@ -12,7 +12,7 @@ import java.util.Map;
 public class KeyboardRow {
 
     public String[] findWords(String[] words) {
-        Map<Character, Integer> map = new HashMap<>();
+        Map<Character, Integer> map = new HashMap<Character, Integer>();
         map.put('q', 1);
         map.put('w', 1);
         map.put('e', 1);
@@ -40,7 +40,7 @@ public class KeyboardRow {
         map.put('n', 3);
         map.put('m', 3);
 
-        List<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<String>();
 
         for (int i = 0; i < words.length; i++) {
             String temp = words[i].toLowerCase();

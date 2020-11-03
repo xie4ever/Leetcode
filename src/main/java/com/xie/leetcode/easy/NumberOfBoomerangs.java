@@ -13,7 +13,7 @@ public class NumberOfBoomerangs {
         int result = 0;
         Map<Integer, Integer> map;
         for (int i = 0; i < points.length; i++) {
-            map = new HashMap<>();
+            map = new HashMap<Integer, Integer>();
             for (int j = 0; j < points.length; j++) {
                 // 不考虑当前同样的点
                 if (i != j) {
